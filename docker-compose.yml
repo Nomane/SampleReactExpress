@@ -6,6 +6,7 @@ services:
      - "27017:27017"
   backend:
     build: ./back/
+    image: nomaneoulali/backexpress
     ports:
       - "6200:6200"
     volumes:
@@ -14,6 +15,7 @@ services:
       - mongodb
   frontend:
     build: ./front/
+    image: nomaneoulali/frontreact
     ports:
       - "3000:3000"
     volumes:
